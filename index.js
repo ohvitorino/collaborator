@@ -12,10 +12,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 const fastify = require('fastify')({ logger: true });
 // Declare a route
 fastify.get('/', (request, reply) => __awaiter(void 0, void 0, void 0, function* () {
+    console.log(request.headers);
     reply
-        .header('Authorization', request.headers['Authorization'])
-        .header('X-Date', request.headers['X-Date'])
-        .header('Content-Type', request.headers['Content-Type']);
+        .header('Authorization', request.headers['authorization'])
+        .header('X-Date', request.headers['x-date'])
+        .header('Content-Type', request.headers['content-type']);
 }));
 // Run the server!
 const start = () => __awaiter(void 0, void 0, void 0, function* () {

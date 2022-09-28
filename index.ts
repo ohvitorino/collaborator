@@ -4,9 +4,9 @@ const fastify = require('fastify')({ logger: true })
 // Declare a route
 fastify.get('/', async (request: any, reply: any) => {
   reply
-    .header('Authorization', request.headers['Authorization'])
-    .header('X-Date', request.headers['X-Date'])
-    .header('Content-Type', request.headers['Content-Type'])
+    .header('Authorization', request.headers['authorization'])
+    .header('X-Date', request.headers['x-date'])
+    .header('Content-Type', request.headers['content-type'])
 })
 
 // Run the server!
